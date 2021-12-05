@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+ <script src="https://kit.fontawesome.com/c1f71eaba9.js" crossorigin="anonymous"></script>
+    <title>Service</title>
+  </head>
+
+  <style>
+
+
+ * {
+                  padding: 0px;
+                  margin: 0px;
+                }
+                
+                .line {
+                  /* width: 2px; */
+                  height: 4px;
+                  background-color: rgb(49, 107, 52);
+                }
+                
+                .cont2 {
+                  display: flex;
+                  background-color: #08192b;
+                  height: 320px;
+                  color: white;
+                }
+                .cont3 {
+                  /* background-color: rgb(182, 92, 92); */
+                  /* height: 280px; */
+                  width: 20%;
+                  margin: 20px;
+                }
+                .cont3 h3 {
+                  /* text-align: center; */
+                  /* background-color: blueviolet; */
+                  margin-left: 47px;
+                }
+                .cont3 li {
+                  list-style: none;
+                  text-decoration: none;
+                  margin: 17px 0px 0px 47px;
+                }
+                .cont3 li a {
+                  text-decoration: none;
+                  color: white;
+                  /* margin: 0 0 0 0px; */
+                }
+                .contx {
+                  width: 30%;
+                }
+                .conty {
+                  width: 30%;
+                
+                  text-align: end;
+                  padding-top: 80px;
+                }
+                .copyright {
+                  height: 40px;
+                  text-align: center;
+                  padding-top: 6px;
+                
+                  background-color: #0e2a47;
+                  color: rgb(255, 255, 255);
+                }
+                .arrow-up {
+                  border-left: 30px solid transparent;
+                  border-right: 30px solid transparent;
+                  border-bottom: 30px solid rgb(0, 76, 155);
+                  position: fixed;
+                  bottom: 10px;
+                  right: 35px;
+                 
+                 
+                }
+                .base {
+                  width: 60px;
+                  height: 3px;
+                  background-color: rgb(0, 76, 155);
+                  position: fixed;
+                  bottom: 4px;
+                  right: 35px;
+                }
+        .button {
+            border-radius: 4px;
+            background-color: #f4511e;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 440px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        .thumb_head {
+          
+            /* margin-left: 100px; */
+        }
+
+        .banimg_img {
+            /* margin-left: 879px; */
+            width: 400px;
+        }
+        .bantext{
+            margin-top: 60px;
+        }
+        .thumbnail{
+        display: flex;
+        justify-content: space-around;
+       
+        }
+
+
+    body{
+      {% load static %}
+        background: url("{% static 'ccic_app/newcar2.jpg' %}  ");
+        background-repeat: no-repeat;
+    }
+    .sertext{
+  margin-top: 19%;
+  text-decoration: underline;
+    text-decoration-color: bisque;
+}
+.shakeelform{
+  width: 50%;
+    text-align: justify;
+    margin-left: 28%;
+    margin-top: 40px;
+     
+}
+.trt{
+  
+  position: absolute;
+    font-size: 18px;
+    font-family: inherit;
+    font-style: oblique;
+    font-variant: ordinal;
+    color: white;
+}
+.form-check{
+  margin-top: -10px;
+}
+.bot{
+  width: 200px;
+
+}
+.label{
+  display: inline-block;
+  font-size: 19px;
+  font-family: sans-serif;
+  font-style: oblique;
+  font-variant: slashed-zero;
+  color: #fcfcfb;
+}
+
+.bgback{
+  height: 100vh;
+  width: 100%;
+}
+.boxx{
+  background-color:#e0d1d1 ;
+  display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 450;
+    line-height: 1.5;
+    color: black;
+    background-color: #f4eeee;
+    background-clip: padding-box;
+    border: 1px solid #f4f7fa;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+<style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+  body{
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+  }
+  *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  .container{
+    max-width: 1170px;
+    margin:auto;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul{
+    list-style: none;
+  }
+  .footer{
+    background-color: #24262b;
+      padding: 70px 0;
+      margin-top: 250px;
+  }
+  .footer-col{
+     width: 25%;
+     padding: 0 15px;
+  }
+  .footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+  }
+  .footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+  }
+  
+  /*responsive*/
+  @media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
+
+</style>
+  <body>
+
+    <!-- Navbar start here -->
+            {% load static %}
+        
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="/ccic"><img src="{% static 'ccic_app/CCIC.jpg' %}" alt="" style="width: 72px;
+                  border: 2px solid #242020;
+                  border-radius: 9px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link " aria-current="page" href="/ccic">Home</a>
+                    </li>
+                  
+          
+  
+                    <li class="nav-item">
+                      <a class="nav-link" href="/ccic/services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/ccic/gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/ccic/booking">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="/ccic/contact">Contact us</a>
+                    </li>
+                   
+                    <li class="nav-item">
+                      <a class="nav-link " href="/ccic/about">About us</a>
+                    </li>
+                  </ul>
+                  <!-- <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form> -->
+                </div>
+              </div>
+            </nav>
+
+
+
+
+            <div  class="bgback">
+        <h1 class="conta" style="text-align: center; margin-top:76px;">CONTACT US</h1>
+        
+         <div class="shakeelform" >
+        <form action="" method="POST">
+          <div class="form-group">
+            <label class="label" for="exampleInputEmail1">Enter your name</label>
+            <input type="text" name="name" class="boxx" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Enter your name"/>
+            <small id="emailHelp" class="form-text text-muted"></small>
+          </div>
+          <div class="form-group">
+            <label class="label" for="exampleInputEmail1">Phone number</label>
+            <input type="tel" name="myphone" class="boxx" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Enter your mobile number"/>
+            <small id="emailHelp" class="form-text text-muted"></small>
+          </div>
+          <div class="form-group">
+            <label class="label" for="exampleInputEmail1">Email address</label>
+            <input type="email" name="emailaddress" class="boxx" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Enter your email"/>
+            <small id="emailHelp" class="form-text text-muted"></small>
+          </div>
+          <div class="form-group">
+            
+      
+          <div class="form-group">
+            <label class="label"  for="exampleInputPassword1">Location</label>
+            <input type="text" name="loca" class="boxx" id="exampleInputPassword1" placeholder="Enter your address"/>
+          </div>
+          <label class="trt" for="exampleInputEmail1">Message</label>
+           <textarea  class="boxx my-4 " name="" id="" cols="30" rows="4" type="text" name="message"   placeholder="Enter your query"></textarea>
+            <small id="emailHelp" class="form-text text-muted"></small>
+          </div>
+         
+          <div class="form-check ">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
+            <label class="label" class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <center>
+          <button type="submit" class="btn btn-primary" style="width:50%">Submit</button>
+          </center>
+        </form>
+      </div>
+      </div>
+
+   
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col">
+              <h4>CCIC CAR CARE</h4>
+              <ul>
+                <li style="color: #adadad;
+                margin-left: -33px;">Our concept is called a “Service Car Wash.”<br> This is a concept that allows us to offer <br> all the quality services of a traditional full service <br> car wash along with the speed and services <br> of a exterior & Interior car wash.
+                  We offer options that cover making sure your car is cleaned how you like it.</li>
+                
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Head Office</h4>
+              <ul>
+                <li><i class="fas fa-map-marker-alt" style="color: red;"></i> <a href="#">(CCIC CAR CARE) Shop No.7/8
+                  Subhash Nagar,Bhopal (M.P)</a></li>
+                <li><i class="far fa-clock" style="color: red;"></i><a href="#">10:00am to 7:30pm </a></li>
+                <li><i class="fas fa-phone-volume" style="color: red;"></i> <a href="#">9993234597</a></li>
+                <li><i class="fas fa-envelope" style="color: red; margin-left: -1px;"></i><a href="#">azamakrama01@gmail.com</a></li>
+                
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>follow us</h4>
+              <div class="social-links">
+                <a href="https://m.facebook.com/ccic.educational.consultant/?refid=46&__xts__%5B0%5D=12.Abro_BIROCaptwNGEUAQGHMvGmbB2BRCMX3IGx7dMxL09e-B9vlLTwkvPALVhSQgh4veihmxh6SscIHdjAJmhxu6htWARLXq_uYD6fnSgHnj2Ykq9upp9qykRtUasFWiYpttLNNbyWpmXEG6DVMcfkJ1maSfulgtbfrXBAYTJ8iiVhE5RSGpncqUvi1_gC5rJSCVn-m7hHviPFRc5AiGSj8DJIMFwT6nV4sDCUL-dlhykVi9gUsnvJy_NR2CvzzbubM4gSa-m4qVmO_S5Mc9vX_5njNEz7to14rm-FS901m8vjSsBxKhPkmMv-esIrTVkOacl_DBPYrZNS5fY6aZQN3x1WTZsx0CR0e17p8qdz3vi3SyiY5rehF_tLeA3WvYAQ7mg12-6RYdQ42EnrlrFp3KmjKdIvC7WFBEs-zgUbrRJGrcPdWs5yiNH00XzFXnrq_P7JjugeDReOuFdx1GfeRQ7MWD0eL354UX-Bz-H_988-LHBqIs0iHH8THeLtpEPYq1rcnOqvTlWbplvUjl_U-QY-DaP8YEmUqaOyAj1P7FqsIUosmbjJu1j_cx2GPmvf4"><i class="fab fa-facebook-f"></i></a>
+                <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
+                <a href="https://instagram.com/cciccarcare?utm_medium=copy_link"><i class="fab fa-instagram"></i></a>
+                <!-- <a href="#"><i class="fab fa-linkedin-in"></i></a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+     </footer>
+       
+            
+           
+                  
+              
+                  
+                    <div class="copyright">
+                      <p>Copyright © 2020-2021 CCICCARCARE.COM</p>
+                
+                    </div>
+                  </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
